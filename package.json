@@ -1,0 +1,31 @@
+{
+  "name": "better-times",
+  "version": "1.0.0",
+  "description": "Small JavaScript library that make dates fun again",
+  "main": "dates.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baradm100/betterTimes.git"
+  },
+  "keywords": [
+    "dates"
+  ],
+  "author": "Bar Admoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baradm100/betterTimes/issues"
+  },
+  "homepage": "https://github.com/baradm100/betterTimes#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-spies": "^1.0.0",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
+  }
+}
