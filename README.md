@@ -2,6 +2,8 @@
 
 Better times is a small .js file that makes dates (in JavaScript) fun again.
 
+[![CircleCI](https://circleci.com/gh/baradm100/better-times.svg?style=svg)](https://circleci.com/gh/baradm100/better-times)
+
 ## Table of Content
 
 * [Goal](#goal)
