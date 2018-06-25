@@ -10,7 +10,14 @@ Date.convertTable.year = Date.convertTable.day * 365;
 
 /**
  * Add a cretin unit of time the the date
- * @param {String} unit The unit of time to add
+ * @param {String} unit The unit of time to add, options:
+ * * seconds
+ * * minutes
+ * * hours
+ * * days
+ * * weeks
+ * * months
+ * * years
  * @param {Number} value The value to add
  */
 Date.prototype.add = function (unit, value) {
@@ -44,6 +51,13 @@ Date.prototype.add = function (unit, value) {
 /**
  * Subtract a cretin unit of time the the date
  * @param {String} unit The unit of time to add
+ * * seconds
+ * * minutes
+ * * hours
+ * * days
+ * * weeks
+ * * months
+ * * years
  * @param {Number} value The value to add
  */
 Date.prototype.subtract = function (unit, value) {
@@ -105,4 +119,3 @@ Date.prototype.prevMonth = function () {
 Date.prototype.prevYear = function () {
     this.subtract('years', 1);
 }
-
