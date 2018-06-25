@@ -77,35 +77,35 @@ describe('Date', function () {
         describe('Edge cases', function () {
             describe('Short year', function () {
                 beforeEach(function () {
-                    baseDate = new Date('2018-02-28T22:00:00.000Z');
+                    baseDate = new Date('2018-02-28T00:00:00.000Z');
                 });
 
                 it('should add 1 day correctly to short year during February', function () {
                     baseDate.add('day', 1);
 
-                    expect(baseDate.toISOString()).to.be.equal('2018-03-01T22:00:00.000Z');
+                    expect(baseDate.toISOString()).to.be.equal('2018-03-01T00:00:00.000Z');
                 });
 
                 it('should add 1 year correctly to short year during February', function () {
                     baseDate.add('year', 1);
 
-                    expect(baseDate.toISOString()).to.be.equal('2019-02-28T22:00:00.000Z');
+                    expect(baseDate.toISOString()).to.be.equal('2019-02-28T00:00:00.000Z');
                 });
             });
 
             describe('Long year', function () {
                 it('should add 1 day correctly to long year during February', function () {
-                    baseDate = new Date('2016-02-28T22:00:00.000Z');
+                    baseDate = new Date('2016-02-28T00:00:00.000Z');
                     baseDate.add('day', 1);
 
-                    expect(baseDate.toISOString()).to.be.equal('2016-02-29T22:00:00.000Z');
+                    expect(baseDate.toISOString()).to.be.equal('2016-02-29T00:00:00.000Z');
                 });
 
                 it('should add 1 year correctly to long year during February', function () {
-                    baseDate = new Date('2016-02-29T22:00:00.000Z');
+                    baseDate = new Date('2016-02-29T00:00:00.000Z');
                     baseDate.add('year', 1);
 
-                    expect(baseDate.toISOString()).to.be.equal('2017-02-28T22:00:00.000Z');
+                    expect(baseDate.toISOString()).to.be.equal('2017-03-01T00:00:00.000Z');
                 });
             });
         });
