@@ -8,11 +8,6 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.2.1
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
 
     working_directory: ~/repo
 
@@ -40,14 +35,15 @@ jobs:
       - run:
           name: code-coverage
           command: './node_modules/.bin/nyc report --reporter=text-lcov'
+      - run:
+          name: lint
+          command: './node_modules/.bin/eslint test/*.js *.js --fix-dry-run'
       - store_artifacts:
           path: test-results.xml
           prefix: tests
       - store_artifacts:
           path: coverage
           prefix: coverage
-      - store_test_results:
-          path: test-results.xml
 
 
 
