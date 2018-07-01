@@ -1,3 +1,6 @@
+// Helper function
+const isNumber = value => !Number.isNaN(parseFloat(value));
+
 // Adding time intervals by milliseconds for easy usage
 Date.convertTable = {
   second: 1000,
@@ -21,7 +24,7 @@ Date.convertTable.year = Date.convertTable.day * 365;
  * @param {Number} value The value to add
  */
 Date.prototype.add = function (unit, value) {
-  if (Number.isNaN(value)) {
+  if (!isNumber(value)) {
     throw new Error('Invalid value, must be a number');
   }
 
