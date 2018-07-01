@@ -1,8 +1,8 @@
 # Better Times
 
-Better times is a small .js file that makes dates (in JavaScript) fun again.
-
 [![CircleCI](https://circleci.com/gh/baradm100/better-times.svg?style=svg)](https://circleci.com/gh/baradm100/better-times)
+
+Better times is a small .js file that makes dates (in JavaScript) fun again.
 
 ## Table of Content
 
@@ -16,6 +16,12 @@ Better times is a small .js file that makes dates (in JavaScript) fun again.
     * [Date.prototype.prevDay](#date.prototype.prevDay)
     * [Date.prototype.prevWeek](#date.prototype.prevWeek)
     * [Date.prototype.prevYear](#date.prototype.prevYear)
+    * [Date.prototype.endOfDay](#date.prototype.endOfDay)
+    * [Date.prototype.endOfMonth](#date.prototype.endOfMonth)
+    * [Date.prototype.endOfYear](#date.prototype.endOfYear)
+    * [Date.prototype.startOfDay](#date.prototype.startOfDay)
+    * [Date.prototype.startOfMonth](#date.prototype.startOfMonth)
+    * [Date.prototype.startOfYear](#date.prototype.startOfYear)
 * [Time unit](#time-unit)
 * [Contribute](#contribute)
 
@@ -137,7 +143,79 @@ let date = new Date('2010-02-01T00:00:00.000Z');
 date.prevYear(); // change date to: 2010-01-01T00:00:00.000Z
 ```
 
+## Date.prototype.endOf
+
+### Date.prototype.endOfDay
+
+Change date to the end of the day.
+
+#### Usages
+
+```javascript
+let date = new Date('2010-01-01T00:00:00.000Z');
+date.endOfDay(); // change date to: 2010-01-01T23:59:59.000Z
+```
+
+### Date.prototype.endOfMonth
+
+Change date to the end of the month and day.
+
+#### Usages
+
+```javascript
+let date = new Date('2010-01-01T00:00:00.000Z');
+date.endOfMonth(); // change date to: 2010-01-31T23:59:59.000Z
+```
+
+### Date.prototype.endOfYear
+
+Change date to the end of the year and day.
+
+#### Usages
+
+```javascript
+let date = new Date('2010-01-01T00:00:00.000Z');
+date.endOfYear(); // change date to: 2010-12-31T23:59:59.000Z
+```
+
+## Date.prototype.startOf
+
+### Date.prototype.startOfDay
+
+Change date to the start of the day.
+
+#### Usages
+
+```javascript
+let date = new Date('2010-01-01T23:59:59.000Z');
+date.startOfDay(); // change date to: 2010-01-01T00:00:00.000Z
+```
+
+### Date.prototype.startOfMonth
+
+Change date to the start of the month and the day.
+
+#### Usages
+
+```javascript
+let date = new Date('2010-01-31T23:59:59.000Z');
+date.startOfMonth(); // change date to: 2010-01-01T00:00:00.000Z
+```
+
+### Date.prototype.startOfYear
+
+Change date to the start of the year and the day.
+
+#### Usages
+
+```javascript
+let date = new Date('2010-12-31T23:59:59.000Z');
+date.startOfYear(); // change date to: 2010-01-01T00:00:00.000Z
+```
+
 ## Time unit
+
+> Note: All time units should end with an 's', if not, the 's' is added automatically
 
 * seconds
 * minutes

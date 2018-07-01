@@ -200,4 +200,53 @@ describe('Date', function () {
             });
         });
     });
+
+    describe('#endOf', function () {
+        describe('#endOfDay', function () {
+            it('should change to the end of the day', function () {
+                baseDate.endOfDay();
+                expect(baseDate.toISOString()).to.be.equal('2010-01-01T23:59:59.000Z');
+            });
+        });
+
+        describe('#endOfMonth', function () {
+            it('should change to the end of the month', function () {
+                baseDate.endOfMonth();
+                expect(baseDate.toISOString()).to.be.equal('2010-01-31T23:59:59.000Z');
+            });
+        });
+
+        describe('#endOfYear', function () {
+            it('should change to the end of the year', function () {
+                baseDate.endOfYear();
+                expect(baseDate.toISOString()).to.be.equal('2010-12-31T23:59:59.000Z');
+            });
+        });
+    });
+
+    describe('#startOf', function () {
+        describe('#startOfDay', function () {
+            it('should change to the end of the day', function () {
+                baseDate = new Date('2010-01-01T23:59:59.000Z');
+                baseDate.startOfDay();
+                expect(baseDate.toISOString()).to.be.equal('2010-01-01T00:00:00.000Z');
+            });
+        });
+
+        describe('#startOfMonth', function () {
+            it('should change to the end of the month', function () {
+                baseDate = new Date('2010-01-31T23:59:59.000Z');
+                baseDate.startOfMonth();
+                expect(baseDate.toISOString()).to.be.equal('2010-01-01T00:00:00.000Z');
+            });
+        });
+
+        describe('#startOfYear', function () {
+            it('should change to the end of the year', function () {
+                baseDate = new Date('2010-12-31T23:59:59.000Z');
+                baseDate.startOfYear();
+                expect(baseDate.toISOString()).to.be.equal('2010-01-01T00:00:00.000Z');
+            });
+        });
+    });
 });

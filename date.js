@@ -40,9 +40,9 @@ Date.prototype.add = function (unit, value) {
     } else if (unit === 'weeks') {
         this.setTime(this.getTime() + (Date.convertTable.week * value));
     } else if (unit === 'months') {
-        this.setMonth(this.getMonth() + value);
+        this.setUTCMonth(this.getMonth() + value);
     } else if (unit === 'years') {
-        this.setFullYear(this.getFullYear() + value);
+        this.setUTCFullYear(this.getFullYear() + value);
     } else {
         throw new Error('Invalid date unit');
     }
@@ -118,4 +118,57 @@ Date.prototype.prevMonth = function () {
  */
 Date.prototype.prevYear = function () {
     this.subtract('years', 1);
+}
+
+/**
+ * Change date to the end of the day (23:59:59)
+ */
+Date.prototype.endOfDay = function () {
+    this.setUTCMinutes(59);
+    this.setUTCSeconds(59);
+    this.setUTCHours(23);
+}
+
+/**
+ * Change date to the end of the month and end of the day
+ */
+Date.prototype.endOfMonth = function () {
+    this.setUTCMonth(this.getUTCMonth() + 1);
+    this.setUTCDate(0);
+    this.endOfDay();
+}
+
+/**
+ * Change date to the end of the year and end of the day
+ */
+Date.prototype.endOfYear = function () {
+    this.setUTCMonth(12);
+    this.setUTCDate(0);
+    this.endOfDay();
+}
+
+/**
+ * Change date to the start of the day (00:00:00)
+ */
+Date.prototype.startOfDay = function () {
+    this.setUTCMinutes(0);
+    this.setUTCSeconds(0);
+    this.setUTCHours(0);
+}
+
+/**
+ * Change date to the start of the month and start of the day
+ */
+Date.prototype.startOfMonth = function () {
+    this.setUTCDate(1);
+    this.startOfDay();
+}
+
+/**
+ * Change date to the start of the year and start of the day
+ */
+Date.prototype.startOfYear = function () {
+    this.setUTCMonth(0);
+    this.setUTCDate(1);
+    this.startOfDay();
 }
