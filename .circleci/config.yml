@@ -37,7 +37,7 @@ jobs:
           command: './node_modules/.bin/nyc report --reporter=text-lcov'
       - run:
           name: lint
-          command: './node_modules/.bin/eslint test/*.js *.js --fix-dry-run'
+          command: 'npm test'
       - store_artifacts:
           path: test-results.xml
           prefix: tests
