@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha",
+    "lint": "eslint test/*.js *.js --fix-dry-run",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100"
   },
   "repository": {
@@ -17,7 +18,7 @@
   "keywords": [
     "dates"
   ],
-  "author": "Bar Admoni",
+  "author": "Bar Admoni (@baradm100)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/baradm100/betterTimes/issues"
