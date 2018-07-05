@@ -37,7 +37,7 @@ jobs:
           command: './node_modules/.bin/nyc report --reporter=text-lcov'
       - run:
           name: lint
-          command: 'npm test'
+          command: 'npm run lint'
       - store_artifacts:
           path: test-results.xml
           prefix: tests
