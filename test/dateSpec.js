@@ -60,6 +60,12 @@ describe('Date', function () {
         });
 
         describe('Validation', function () {
+            it('should down case the time unit', function() {
+                baseDate.add('SECONDS', 1);
+
+                expect(baseDate.toISOString()).to.be.equal('2010-01-01T00:00:01.000Z');
+            });
+
             it("should add 's' to the end of the `unit`", function () {
                 baseDate.add('second', 1);
 
