@@ -28,6 +28,9 @@ Date.prototype.add = function (unit, value) {
     throw new Error('Invalid value, must be a number');
   }
 
+  // Converting the time unit to lowercase
+  unit = unit.toLowerCase();
+
   // Force 's' in the end of the string to convert single to plural
   if (!unit.endsWith('s')) {
     unit += 's';
