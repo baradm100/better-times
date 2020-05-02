@@ -6,24 +6,24 @@ Better times is a small .js file that makes dates (in JavaScript) fun again.
 
 ## Table of Content
 
-* [Goal](#goal)
-* [Functions](#functions)
-    * [Date.prototype.add](#date.prototype.add)
-    * [Date.prototype.subtract](#date.prototype.subtract)
-    * [Date.prototype.nextDay](#date.prototype.nextDay)
-    * [Date.prototype.nextWeek](#date.prototype.nextWeek)
-    * [Date.prototype.nextYear](#date.prototype.nextYear)
-    * [Date.prototype.prevDay](#date.prototype.prevDay)
-    * [Date.prototype.prevWeek](#date.prototype.prevWeek)
-    * [Date.prototype.prevYear](#date.prototype.prevYear)
-    * [Date.prototype.endOfDay](#date.prototype.endOfDay)
-    * [Date.prototype.endOfMonth](#date.prototype.endOfMonth)
-    * [Date.prototype.endOfYear](#date.prototype.endOfYear)
-    * [Date.prototype.startOfDay](#date.prototype.startOfDay)
-    * [Date.prototype.startOfMonth](#date.prototype.startOfMonth)
-    * [Date.prototype.startOfYear](#date.prototype.startOfYear)
-* [Time unit](#time-unit)
-* [Contribute](#contribute)
+-   [Goal](#goal)
+-   [Functions](#functions)
+    -   [Date.prototype.add](#date.prototype.add)
+    -   [Date.prototype.subtract](#date.prototype.subtract)
+    -   [Date.prototype.nextDay](#date.prototype.nextDay)
+    -   [Date.prototype.nextWeek](#date.prototype.nextWeek)
+    -   [Date.prototype.nextYear](#date.prototype.nextYear)
+    -   [Date.prototype.prevDay](#date.prototype.prevDay)
+    -   [Date.prototype.prevWeek](#date.prototype.prevWeek)
+    -   [Date.prototype.prevYear](#date.prototype.prevYear)
+    -   [Date.prototype.endOfDay](#date.prototype.endOfDay)
+    -   [Date.prototype.endOfMonth](#date.prototype.endOfMonth)
+    -   [Date.prototype.endOfYear](#date.prototype.endOfYear)
+    -   [Date.prototype.startOfDay](#date.prototype.startOfDay)
+    -   [Date.prototype.startOfMonth](#date.prototype.startOfMonth)
+    -   [Date.prototype.startOfYear](#date.prototype.startOfYear)
+-   [Time unit](#time-unit)
+-   [Contribute](#contribute)
 
 ## Goal
 
@@ -217,13 +217,13 @@ date.startOfYear(); // change date to: 2010-01-01T00:00:00.000Z
 
 > Note: All time units should end with an 's', if not, the 's' is added automatically
 
-* seconds
-* minutes
-* hours
-* days
-* weeks
-* months
-* years
+-   seconds
+-   minutes
+-   hours
+-   days
+-   weeks
+-   months
+-   years
 
 ## Contribute
 
